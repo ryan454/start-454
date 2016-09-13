@@ -17,18 +17,32 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php /*
 		X-UA-Compatible could be removed, but why not leave just one line in to shape up IE. Here's some good info:
-		http://stackoverflow.com/questions/6771258/what-does-meta-http-equiv-x-ua-compatible-content-ie-edge-do
-		http://stackoverflow.com/questions/22059060/is-it-still-valid-to-use-ie-edge-chrome-1        
+		http://stackoverflow.com/questions/6771258/what-does-meta-http-equiv-x-ua-compatible-content-ie-edge-do and http://stackoverflow.com/questions/22059060/is-it-still-valid-to-use-ie-edge-chrome-1        
 	*/
 	?><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
+	<?php if (is_search() or is_404()) : ?>
+	<meta name="robots" content="noindex, nofollow" /> 
+	<?php endif; ?>
+	
+	<meta name="title" content="<?php bloginfo('name'); ?>">
+	<meta name="description" content="<?php bloginfo('description'); ?>">
 	<meta name="author" content="<?php bloginfo('name'); ?>">
-	<meta name="Copyright" content="Copyright <?php bloginfo('name'); ?> <?php echo date('Y');?>. All Rights Reserved.">
+	<meta name="copyright" content="Copyright <?php bloginfo('name'); ?> <?php echo date('Y');?>. All Rights Reserved.">
+	
+	<?php /** Wordpress takes care of the <title> tag! Yay! (https://codex.wordpress.org/Title_Tag) */ ?>
+	
+	<!-- Some Link Tags! -->
+	<?php /** Wordpress takes care of favicons! Yay! Don't forget to add it here: Admin > Appearance > Customize > Site Identity (https://codex.wordpress.org/Creating_a_Favicon) */ ?>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 	<?php wp_head(); ?>
+	
+	<?php /** Need old IE support? Uncomment and edit this template: get_template_part( 'template-parts/header-ie-support' ); (hopefully you don't) */ ?>
 </head>
 
 <body <?php body_class(); ?>>
