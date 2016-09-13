@@ -12,12 +12,23 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<!-- Met Tags -->
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<?php /*
+		X-UA-Compatible could be removed, but why not leave just one line in to shape up IE. Here's some good info:
+		http://stackoverflow.com/questions/6771258/what-does-meta-http-equiv-x-ua-compatible-content-ie-edge-do
+		http://stackoverflow.com/questions/22059060/is-it-still-valid-to-use-ie-edge-chrome-1        
+	*/
+	?><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-<?php wp_head(); ?>
+	<meta name="author" content="<?php bloginfo('name'); ?>">
+	<meta name="Copyright" content="Copyright <?php bloginfo('name'); ?> <?php echo date('Y');?>. All Rights Reserved.">
+	
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+
+	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
