@@ -1,0 +1,120 @@
+/*
+Theme Name: Start 454
+Theme URI: http://underscores.me/
+Author: Ryan Medina
+Author URI: http://www.454creative.com
+Description: This is 454 Creative\'s Wordpress starter theme based on Start 454 theme
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: start-454
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Start 454 is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1 Variables
+2 Mixins
+3 Extenders
+
+4 Normalize
+
+5 Elements
+    # Typography
+    # Forms
+
+6 Custom Classes
+
+    # Clearings
+    # Infinite scroll
+
+7 Framework
+
+8 Structure
+    # Navigation
+	    ## Links
+	    ## Menus
+
+9 Wordpress Structure
+    # Accessibility
+    # Alignments
+    # Widgets
+    # Content
+        ## Posts and pages
+        ## Comments
+    # Media
+	    ## Captions
+	    ## Galleries
+        
+--------------------------------------------------------------*/
+
+
+
+/******************************************************************************/
+/* 1. Variables
+/******************************************************************************/
+
+    @import "variables/variables.scss";
+
+/******************************************************************************/
+/* 2. Mixins
+/******************************************************************************/
+
+    @import "mixins/mixins.scss";
+
+/******************************************************************************/
+/* 3. Extenders
+/******************************************************************************/
+
+    @import "extenders/extenders.scss";
+
+/******************************************************************************/
+/* 4. Normalize
+/******************************************************************************/
+
+    @import "normalize/normalize.scss";
+
+/******************************************************************************/
+/* 5. Elements
+/******************************************************************************/
+
+    @import "elements/elements.scss";
+
+/******************************************************************************/
+/* 6. Custom Classes
+/******************************************************************************/
+
+    @import "custom-class/custom-class.scss";
+
+
+@media screen {
+
+    /******************************************************************************/
+    /* 7. Framework
+    /******************************************************************************/
+
+        @import "framework/framework.scss";
+
+    /******************************************************************************/
+    /* 8. Extenders
+    /******************************************************************************/
+
+        @import "structure/structure.scss";
+
+    /******************************************************************************/
+    /* 9. Wordpress Structure
+    /******************************************************************************/
+
+        @import "wordpress-structure/wordpress-structure.scss";
+
+}

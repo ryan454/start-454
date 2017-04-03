@@ -1,0 +1,279 @@
+/*------------------------ Standard Elements ------------------------*/	
+
+    body,
+    button,
+    input,
+    select,
+    textarea {
+        color: #404040;
+        font-family: sans-serif;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+/*------------------------ H Tags! ------------------------*/	
+
+    h1, h2, h3, h4, h5, h6 { margin: 0 0 10px 0; clear: both; }
+    h1 {  }
+    h2 {  }
+    h3 {  }
+    h4 {  }
+    h5 {  }
+    h6 {  }
+
+
+    p {
+        margin: 10px 0 30px 0;
+    }
+
+    dfn,
+    cite,
+    em,
+    i {
+        font-style: italic;
+    }
+
+    blockquote {
+        margin: 0 1.5em;
+    }
+
+    address {
+        margin: 0 0 1.5em;
+    }
+
+    pre {
+        background: #eee;
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 15px;
+        font-size: 0.9375rem;
+        line-height: 1.6;
+        margin-bottom: 1.6em;
+        max-width: 100%;
+        overflow: auto;
+        padding: 1.6em;
+    }
+
+    code,
+    kbd,
+    tt,
+    var {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 15px;
+        font-size: 0.9375rem;
+    }
+
+    abbr,
+    acronym {
+        border-bottom: 1px dotted #666;
+        cursor: help;
+    }
+
+    mark,
+    ins {
+        background: #fff9c0;
+        text-decoration: none;
+    }
+
+    big {
+        font-size: 125%;
+    }
+
+
+    html {
+        box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+        box-sizing: inherit;
+    }
+
+    body {
+        background: #fff; /* Fallback for when there is no custom background color defined. */
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+        content: "";
+    }
+
+    blockquote,
+    q {
+        quotes: "" "";
+    }
+
+    hr {
+        background: rgba(0,0,0,1.0);
+        width: 100%; 
+        height: 3px;
+        border: 0;
+        margin-bottom: 1.5em;
+    }
+
+    ul,
+    ol {
+        margin: 0 0 1.5em 3em;
+    }
+
+    ul {
+        /* list-style: disc; */
+    }
+
+    ol {
+        /* list-style: decimal; */
+    }
+
+    li > ul,
+    li > ol {
+        /*
+        margin-bottom: 0;
+        margin-left: 1.5em;
+        */
+    }
+
+    dt {
+        font-weight: bold;
+    }
+
+    dd {
+        margin: 0 1.5em 1.5em;
+    }
+
+    img {
+        height: auto; /* Make sure images are scaled correctly. */
+        max-width: 100%; /* Adhere to container width. */
+    }
+
+    table {
+        margin: 0 0 1.5em;
+        width: 100%;
+    }
+
+/*------------------------ Forms ------------------------*/	
+
+    button,
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"] {
+        background: rgba(214,0,0,1); 
+
+        display: inline-block; 
+        /* min-width: 170px; */ 
+        margin-top: 10px; 
+        margin-right: 15px; 
+        padding: 5px 20px; 
+        
+        border-radius: 0px;
+        border: none;
+        
+        font-size: 20px; 
+        color: rgba(255,255,255,.80);
+        font-weight: bold;
+        letter-spacing: 1px; 
+        text-transform: uppercase; 
+        text-decoration: none; 
+        line-height: 32px; 
+        text-align: center; 
+    }
+  
+
+    button:hover,
+    input[type="button"]:hover,
+    input[type="reset"]:hover,
+    input[type="submit"]:hover {
+        color: rgba(255,255,255,1); 
+        /* border-color: #ccc #bbb #aaa; */
+    }
+
+    button:focus,
+    input[type="button"]:focus,
+    input[type="reset"]:focus,
+    input[type="submit"]:focus,
+    button:active,
+    input[type="button"]:active,
+    input[type="reset"]:active,
+    input[type="submit"]:active {
+        border-color: #aaa #bbb #bbb;
+        box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="range"],
+    input[type="date"],
+    input[type="month"],
+    input[type="week"],
+    input[type="time"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="color"],
+    textarea {
+		width: 90%;
+        margin: 0 0 10px 0;
+		padding: 15px 5%;
+        color: #666;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    select {
+        border: 1px solid #ccc;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="url"]:focus,
+    input[type="password"]:focus,
+    input[type="search"]:focus,
+    input[type="number"]:focus,
+    input[type="tel"]:focus,
+    input[type="range"]:focus,
+    input[type="date"]:focus,
+    input[type="month"]:focus,
+    input[type="week"]:focus,
+    input[type="time"]:focus,
+    input[type="datetime"]:focus,
+    input[type="datetime-local"]:focus,
+    input[type="color"]:focus,
+    textarea:focus {
+        color: #111;
+    }
+
+    textarea {
+        width: 100%;
+    }
+
+
+/*------------------------ Links! ------------------------*/	
+
+    a {
+        color: rgba(0,132,255,1.00);
+        transition: all .4s ease;
+    }
+
+    a:visited {
+        color: rgba(0,132,255,1.00);
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+        color: rgba(0,132,255,1.00);
+    }
+
+    a:focus {
+        outline: 0;
+    }
+
+    a:hover,
+    a:active {
+        outline: 0;
+    }

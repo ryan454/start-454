@@ -1,0 +1,108 @@
+
+/*------------------------ Responsive Column Structure ------------------------*/
+
+	.columns	{ 
+        margin: 0 $left-margin 0 $right-margin; float: left;
+
+        @media only screen and (max-width : $bp-medium-small) { float: none; }
+    }
+
+	.first		{     
+        margin-left: 0;
+        
+        @media only screen and (max-width : $bp-medium-small) { margin-left: $left-margin; }
+    }
+
+    .last		{ 
+        margin-right: 0; 
+
+        @media only screen and (max-width : $bp-medium-small) { margin-right: $right-margin; }    
+    }
+	
+	.one		{ width: 100% - ($left-margin + $right-margin); }
+	.two		{ width: (100% / 2) - ($left-margin + $right-margin); }
+	.three		{ width: (100% / 3) - ($left-margin + $right-margin); }
+	.four		{ width: (100% / 4) - ($left-margin + $right-margin); }	
+    .five		{ width: (100% / 5) - ($left-margin + $right-margin); }
+	.six		{ width: (100% / 6) - ($left-margin + $right-margin); }
+	.seven		{ width: (100% / 7) - ($left-margin + $right-margin); }
+	.eight		{ width: (100% / 8) - ($left-margin + $right-margin); }
+	.nine		{ width: (100% / 9) - ($left-margin + $right-margin); }
+	.ten		{ width: (100% / 10) - ($left-margin + $right-margin); }
+	.eleven		{ width: (100% / 11) - ($left-margin + $right-margin); }
+	.twelve		{ width: (100% / 12) - ($left-margin + $right-margin); }
+	.thirteen	{ width: (100% / 13) - ($left-margin + $right-margin); }
+	.fourteen	{ width: (100% / 14) - ($left-margin + $right-margin); }
+	.fifteen	{ width: (100% / 15) - ($left-margin + $right-margin); }
+	.sixteen	{ width: (100% / 16) - ($left-margin + $right-margin); }
+
+	.two-thirds		{ width: ( ( 2 * (100% / 3) ) - ($left-margin + $right-margin) ); }
+	.two-fourths	{ width: ( ( 2 * (100% / 4) ) - ($left-margin + $right-margin) ); }
+    .three-fourths	{ width: ( ( 3 * (100% / 4) ) - ($left-margin + $right-margin) ); }
+
+    .one, .two, .three, .two-thirds, .four, .two-fourths, .three-fourths		{ 
+        @media only screen and (max-width : $bp-medium-small) { 
+                float: none; 
+        }
+    }
+
+
+    /*------------------------ Masonry Box Grid ------------------------*/
+    /*
+    /* Handy tutorial on CSS aspect ratio trick
+    /* http://www.w3schools.com/howto/howto_css_aspect_ratio.asp 
+    /*
+    */    
+
+    .masonry-box-wrap-100-50, .masonry-box-wrap-50-50, .masonry-box-wrap-25-25
+        { 
+            margin: 0 0; float: left; position: relative; /* If you want to allow absolute position inside */ 
+
+        }
+    
+    .masonry-box-wrap-100-50    { 
+        width: 100%; padding-top: 50%; /* 2:1 Aspect Ratio */ 
+        
+        @media only screen and (max-width : $bp-medium) { 
+            margin: 0 0; float: none; 
+        }  
+        
+        @media only screen and (max-width : $bp-medium-small) { 
+        
+        }        
+    }
+
+    .masonry-box-wrap-50-50     { 
+        width: 50%; padding-top: 50%; /* 1:1 Aspect Ratio */ 
+        
+        @media only screen and (max-width : $bp-medium) { 
+            margin: 0 0; 
+            float: none; 
+            width: 100%; 
+            padding-top: 100%; 
+        }  
+        
+        @media only screen and (max-width : $bp-medium-small) { 
+        
+        }     
+    }
+
+    .masonry-box-wrap-25-25     { 
+        width: 25%; padding-top: 25%; /* 1:1 Aspect Ratio */
+        
+        @media only screen and (max-width : $bp-medium) {  
+        
+        }  
+        
+        @media only screen and (max-width : $bp-medium-small) { 
+            width: 50%; padding-top: 50%; /* 1:1 Aspect Ratio */
+            
+            &:nth-child(2n +1)    { 
+                clear: after; 
+            }
+            
+        }     
+    }
+    
+        .masonry-box    { width: 100%; height: 100%; position: absolute; top: 0; overflow: hidden; }  
+
